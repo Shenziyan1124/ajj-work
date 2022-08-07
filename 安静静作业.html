@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>anjingjing</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.js"></script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.common.js"></script> -->
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 等线;
+      color: #fff;
+    }
+    li {
+      list-style: none;
+    }
+    img {
+      vertical-align: top;
+      border: none;
+    }
+
+    .body-wrap {
+      background-color: #000;
+      height: 100%;
+    }
+    .header {
+      height: 80px;
+    }
+    .d-wp {
+      max-width: 1400px;
+      height: 643px;
+      margin: 0 auto;
+      position: relative;
+      /* background:url('./img/body-bg.jpg')  repeat top,rgba(8, 8, 8, 1); */
+    }
+    .d-wp-img {
+      width: 100%;
+      height: 100%;
+    }
+    .title-h1 {
+      font-size: 46px;
+      color: #fff;
+      position: absolute;
+      top: 33%;
+      left: 38%;
+    }
+    .title-h6 {
+      color: #fff;
+      position: absolute;
+      top: 46%;
+      left: 50%;
+      font-size: 36px;
+    }
+
+    .d-wp-text {
+      margin-top: 70px;
+      height: 100%;
+    }
+    .d-wp-text-content {
+      display: flex;
+    }
+    .d-wp-text-img {
+      width: 500px;
+      height: 500px;
+      object-fit: none;
+    }
+    .text-p {
+      padding-left: 50px;
+    }
+    .text {
+      color: #fff;
+      font-size: 24px;
+      line-height: 50px;
+      text-indent: 1.5cm;
+      letter-spacing: 2px;
+    }
+    .yinyan {
+      text-indent: 0;
+      letter-spacing: 0px;
+      font-size: 46px;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .one {
+      margin-top: 80px;
+      height: 100%;
+    }
+    .one-h1 {
+      font-size: 34px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .one-h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 28px;
+      margin: 28px 0;
+    }
+  </style>
+  <body class="body-wrap">
+    <header class="header"></header>
+    <div class="d-wp">
+      <img src="./img/body-bg.jpg" alt="" class="d-wp-img" />
+      <h1 class="title-h1">同妻：超过1600万人的婚姻悲剧</h1>
+      <h6 class="title-h6">组员：安静静 李宸 陆子淳</h6>
+    </div>
+    <div class="d-wp d-wp-text">
+      <div class="d-wp-text-content">
+        <div>
+          <p class="text yinyan">引言</p>
+          <img
+            src="./img/woman.jpg"
+            class="d-wp-text-img"
+            style="margin-top: 53px;"
+          />
+        </div>
+        <div class="text-p">
+          <p class="text">像李洁这样的人，在中国被称为“同妻”。</p>
+          <p class="text">
+            当李洁找到青岛大学医学院教授张北川咨询时，张北川告诉她，可以基本确定她的丈夫就是同性恋。
+          </p>
+          <p class="text">
+            在这段婚姻里，李洁总是觉得丈夫不太对劲。他很少在家里洗澡，但是身上不脏，手机定位有在宾馆的记录。
+          </p>
+          <p class="text">
+            在李洁的直觉里，丈夫“不会和女人开房”。
+          </p>
+          <p class="text">
+            后来，她发现丈夫似乎便血。二人的性生活并不和睦，丈夫从不脱上衣，更不会触碰她的上半身。整个过程像是在机械地完成任务。
+          </p>
+
+          <p class="text">
+            当李洁找到青岛大学医学院教授张北川咨询时，张北川告诉她，可以基本确定她的丈夫就是同性恋。
+          </p>
+          <p class="text">在李洁之外，还有多少位女性经受着无望的婚姻呢？</p>
+        </div>
+      </div>
+      <p class="text">
+        同妻，指的是与男同性恋进入合法的婚姻关系，而本身是异性恋的女性。哈尔滨工业大学社会学系博士生导师唐魁玉认为，相比残疾人等身体上的弱势群体，同妻更是心理上的弱势群体，她们心里痛苦，不容易摆脱，困境特征明显。
+      </p>
+    </div>
+    <div class="d-wp one">
+      <h1 class="one-h1">一、中国“同妻”丈夫情况</h1>
+      <p class="text">
+        作为在中国传统社会文化下，性别取向仍然难以被主流接受的同性恋群体，对于男同性恋而言，要在满足自己情感需求的情况下完成传统社会要求的家庭责任，是压抑而痛苦的。但事实上，在“同妻”婚姻中，他们既不是最无辜的，也不是遭受最多苦难的，而恰恰是最自私的。
+      </p>
+      <div
+        id="main1"
+        style="width: 800px;height:600px;    margin: 15px auto;"
+      ></div>
+      <p class="text">
+        调查研究显示，男同性恋在进入婚姻前大部分人都知道自己的性取向，仅有少部分人不知道自己的性取向，是婚后才慢慢得知。相反，女性在婚前大部分都不知道丈夫的性取向，只有寥寥无几的人是婚前就知晓，但以为婚后可以用“爱”来感化对方才选择的结婚。
+      </p>
+      <div
+        id="main2"
+        style="width: 800px;height:600px; margin: 15px auto;"
+      ></div>
+      <p class="text" style="margin-top: -100px;">
+        同样，他们选择进入婚姻的目的也十分的自私。
+      </p>
+      <p class="text">
+        一半以上的男性是因为父母的逼迫才不得不进入婚姻，19.2%的人企图通过婚姻来掩盖自己的性取向，以此来维护自己的工作和声誉，还有一小部分人是因为想要孩子才结婚，完全把女性当作“生育机器”。此外，有部分男性进入婚姻的原因，是男性伴侣规劝自己结婚，希望双方早日“稳定”下来，以免日后双方因结婚而结束感情。
+      </p>
+      <h1 class="one-h2" style="font-size: 20px; margin-bottom: -2px;">
+        男同性恋面对婚姻的心理情绪
+      </h1>
+      <p style="text-align: center;">
+        <img src="./img//ci.jpg" alt="" style="width: 700px;height:700px;" />
+      </p>
+      <p class="text" style="margin-top: -28px;">
+        进入婚姻的男同性恋往往想要远离妻子、逃避家庭，通常情绪低落，伴随着绝望、痛苦等一系列的消极情绪，很难在婚姻中获得幸福感。而在一段婚姻里，夫妻二人有着长时间的相处时间，他们的情绪也难免影响到妻子，这也是同妻这一群体所经受的痛苦的基石。
+      </p>
+      <p class="text">
+        进入婚姻的男同性恋往往想要远离妻子、逃避家庭，通常情绪低落，伴随着绝望、痛苦等一系列的消极情绪，很难在婚姻中获得幸福感。而在一段婚姻里，夫妻二人有着长时间的相处时间，他们的情绪也难免影响到妻子，这也是“同妻”这一群体所经受的痛苦的基石。
+      </p>
+    </div>
+    <div class="d-wp one">
+      <h1 class="one-h1">二、中国“同妻” 的痛苦</h1>
+      <p class="text">
+        2009年3月底，中国首届“同妻”会在山东省青岛市举办，这是国内最早的同妻线下活动。“同妻”会的发起人刘思琦（化名），同样也是“同妻”群体中的一员。
+      </p>
+      <p class="text">
+        尽管“同妻”们在这样的线下活动中逐渐达成了争取自身权益的共识，但她们对于男同性恋群体的无知、自身心理疾病的困难、经济压力的困难甚至是孩子的牵绊，像一张巨网束缚得她们没有力气。
+      </p>
+      <div
+        id="main3"
+        style="width: 800px;height:600px; margin: 15px auto;"
+      ></div>
+      <p class="text">在现实中，“同妻”们往往经受着生理和心理的双重痛苦。</p>
+      <p class="text">
+        在生理上，她们的婚姻毫无幸福感可言。在与男同性恋的婚姻里，没有性生活，没有亲密接触，只有无尽的冷漠和争吵，每天自己独自面对空荡荡的房间。这些“同妻”们试图与丈夫沟通，换来的却是激烈的争吵和丈夫的离家，甚至是被曾经喜爱过的人恐吓，不许告知父母和朋友。
+      </p>
+      <p class="text">
+        而“同妻”的心理痛苦则更加沉重，她们在婚姻里只有数不尽的自我怀疑，“为什么我的丈夫喜欢男人？”、“为什么喜欢男人还要和我结婚？”、“是我不够好，我的丈夫才喜欢男人的吗？”，诸如此类的问题在同妻们的脑海里盘旋，让她们不知所措，并且很难再相信爱情。少数男性甚至逼迫妻子接受与丈夫的男友一同生活，如果不同意，则远走高飞，不再回家。
+      </p>
+      <p class="text">同妻到我为止”的口号到如今，仍然像一把没有敌人的利剑。</p>
+    </div>
+    <div class="d-wp one">
+      <h1 class="one-h1">三、同妻对女性的危害及影响</h1>
+      <h1 class="one-h2">(一) 无性婚姻的冷暴力</h1>
+      <p class="text">
+        被妻子撞破秘密的丈夫会更加地厌恶妻子，拒绝和她们亲近，最多人前装一装恩爱，人后又会变得冰冷无情。不仅没有精神的安慰，连身体的欢愉也吝啬给予，日复一日，年复一年，“同妻”们只能对着空荡的屋子和冷寂的黑夜独自流泪。
+      </p>
+      <div
+        id="main4"
+        style="width: 1000px;height:800px; margin: 15px auto;"
+      ></div>
+      <p class="text">
+        “我和爱人结婚40多年，是无性夫妻。今年我已67岁，才明白我深爱的人是这样的，他不爱我，他爱同性。”
+      </p>
+      <p class="text">
+        “9年多的婚姻，我没有得到一个拥抱和亲吻，太多的伤害无法用语言表述。我怀疑、我痛苦，却不敢去求证。他知道我很痛苦，可他不想离婚，他就想这样熬下去。”
+      </p>
+      <p class="text">
+        如同守活寡一样的冷暴力却更加伤人，如同一把钝刀子割在身上，不会立刻死掉，只会被绝望吞噬。
+      </p>
+      <h1 class="one-h2">(二) 肢体冲突的热暴力</h1>
+      <div
+        id="main5"
+        style="width: 800px;height:600px; margin: 15px auto;"
+      ></div>
+      <p class="text" style="margin-top: -100px;">
+        除了无性婚姻的冷暴力外，“同妻”还更易遭受家暴。由于丈夫得不到理解的苦闷与无法与同性伴侣结婚的愁苦交织在一起，男同性恋往往将这股无名火发泄到妻子身上，而传统的家庭里，妻子由于丈夫是同性恋，所以很难开口对其他人讲述自己的经历，只能默默的忍受丈夫的家暴。在这种情况下，丈夫又会更加肆无忌惮的朝妻子暴力宣泄情绪，形成了恶性循环。
+      </p>
+      <h1 class="one-h2">(三) 更高风险的患病率</h1>
+      <div
+        id="main6"
+        style="width: 800px;height:600px; margin: 15px auto;"
+      ></div>
+      <p class="text">
+        男同性恋也更容易患性病。据统计显示，同样的疾病男男接触者的患病率几乎是女性的十倍，而进入婚姻后的男性，往往还保持着与男性伴侣有性行为的关系，同时在家中还有与妻子发生性行为的可能性，从而将疾病传染给妻子，导致同妻的患病率要比普通夫妻的患病率更高，同妻在婚姻中的感染疾病的风险也更大，白白遭受无妄之灾。
+      </p>
+    </div>
+
+    <div class="d-wp one">
+      <h1 class="one-h1">四、结语</h1>
+      <p class="text">
+        中国长达两千多年的性别文化、生育文化仍植根在社会最底层的脉络中，支撑运转着整个社会文化。而“同妻”的存在，是男同性恋在不被社会所容许后，作为受害人转变为加害者向弱势性别挥刀的。
+      </p>
+      <p class="text">
+        很多骗婚的男同性恋，只觉得自己被迫忍受异性婚姻很惨,却忽视了妻子在这段婚姻中的痛苦。他们只觉得，是社会的偏见和压力迫使他们不得不隐瞒性取向，进而违背意愿步入异性婚姻。
+        也就是说，他们自认为骗婚是身不由己，是自己的妥协。
+        我可以理解同性恋的艰难处境，不被理解以及社会的偏见歧视。可你的被迫选择，为什么要一个无辜的女人替你买单？你带给她的不幸，又有谁来偿还呢？为了自己满足社会期待的需要，不惜把她作为你性取向的遮羞布，你确实过上了他人眼里正常的生活，甚至还能在不为人知地寻欢作乐，可为你生育的同妻又得到了什么？她因为爱而结婚，却为你的性取向葬送一生的幸福。我们理解同性恋在社会的弱势，但你的弱势不能成为你伤害别人的理由。你完全可以更加善意地处理这一问题，比如婚前坦白，或者坚持自己的性取向不踏入异性婚姻，又或者去同性合法的国家度过一生。明明有的选，却选择了让他人承担。
+        弱者抽刀向更弱者，不过是用悲剧创造另一悲剧。无法完成婚姻的许诺，就别拖对方进入苦难。
+      </p>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 基于准备好的dom，初始化echarts实例
+  const myChart1 = echarts.init(document.getElementById('main1'))
+  const myChart2 = echarts.init(document.getElementById('main2'))
+  const myChart3 = echarts.init(document.getElementById('main3'))
+  const myChart4 = echarts.init(document.getElementById('main4'))
+  const myChart5 = echarts.init(document.getElementById('main5'))
+
+  const myChart6 = echarts.init(document.getElementById('main6'))
+  const option6 = {
+    title: {
+      text: '男男接触与男女接触得病率对比',
+      left: 'center',
+      textStyle: {
+        color: '#fff'
+      }
+    },
+    legend: {
+      data: ['男男得病率', '男女得病率'],
+      left: 'center',
+      top: '50px',
+      textStyle: {
+        color: '#fff'
+      }
+    },
+   
+    radar: {
+      // shape: 'circle',
+      center: ['50%', '60%'],
+
+      indicator: [
+        { name: '艾滋病', max: 85, color: '#fff' },
+        { name: '梅毒', max: 85, color: '#fff' },
+        { name: '尖锐湿疣', max: 85, color: '#fff' },
+        { name: '生殖器疱疹', max: 85, color: '#fff' },
+        { name: '淋病', max: 85, color: '#fff' }
+      ]
+    },
+    series: [
+      {
+        name: 'Budget vs spending',
+        type: 'radar',
+        data: [
+          {
+            value: [10, 60, 45, 85, 50],
+            name: '男男得病率',
+            itemStyle: {
+              color: '#78A6D0'
+            }
+          },
+          {
+            value: [0.1, 4, 7, 30, 22],
+            name: '男女得病率',
+            itemStyle: {
+              color: '#E2B5B2'
+            }
+          }
+        ]
+      }
+    ]
+  }
+
+  // 指定图表的配置项和数据
+  const option1 = {
+    title: {
+      text: '婚前是否知道性取向',
+      left: 'center',
+      textStyle: {
+        color: '#fff'
+      }
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
+      }
+    },
+
+    xAxis: {
+      type: 'value',
+      boundaryGap: [0, 0.01],
+      axisLabel: {
+        //x轴文字的配置
+        show: true,
+        textStyle: {
+          color: '#fff'
+        }
+      }
+    },
+    yAxis: {
+      type: 'category',
+      data: ['婚前知道自己/丈夫性取向', '婚前不知道自己/丈夫性取向'],
+      axisLabel: {
+        //x轴文字的配置
+        show: true,
+        textStyle: {
+          color: '#fff'
+        }
+      }
+    },
+    color: ['#C5E4FF', '#E2B5B2'],
+    legend: {
+      top: '40px',
+      textStyle: {
+        color: '#ffffff' //字体颜色
+      }
+    },
+    grid: {
+      bottom: '0%', //距离下边距
+      left: '20%',
+      top: '15%'
+    },
+
+    series: [
+      {
+        name: '男性',
+        type: 'bar',
+        data: [
+          {
+            value: 142,
+            itemStyle: {
+              color: '#C5E4FF'
+            }
+          },
+          {
+            value: 3,
+            itemStyle: {
+              color: '#C5E4FF'
+            }
+          }
+        ],
+        itemStyle: {
+          normal: {
+            label: {
+              show: true, //开启显示
+              position: 'right', //在上方显示
+              textStyle: {
+                //数值样式
+                color: '#ffffff',
+                fontSize: 16
+              }
+            }
+          }
+        }
+      },
+      {
+        name: '女性',
+        type: 'bar',
+        data: [
+          {
+            value: 8,
+            itemStyle: {
+              color: '#E2B5B2'
+            }
+          },
+          {
+            value: 42,
+            itemStyle: {
+              color: '#E2B5B2'
+            }
+          }
+        ],
+        itemStyle: {
+          normal: {
+            label: {
+              show: true, //开启显示
+              position: 'right', //在上方显示
+              textStyle: {
+                //数值样式
+                color: '#ffffff',
+                fontSize: 16
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+
+  const option2 = {
+    title: {
+      text: '男方结婚的原因',
+      left: 'center',
+      textStyle: {
+        color: '#fff'
+      }
+    },
+    tooltip: {
+      trigger: 'item'
+    },
+    legend: {
+      top: '40px',
+      left: 'center',
+      textStyle: {
+        color: '#ffffff' //字体颜色
+      }
+    },
+    grid: {
+      bottom: '10%', //距离下边距
+      top: '15%'
+    },
+    series: [
+      {
+        center: ['50%', '45%'],
+        name: '男方结婚的原因',
+        type: 'pie',
+        radius: ['35%', '60%'],
+        avoidLabelOverlap: false,
+        itemStyle: {
+          borderRadius: 10,
+          borderColor: '#fff',
+          borderWidth: 2
+        },
+        label: {
+          show: false,
+          position: 'center'
+        },
+        emphasis: {
+          label: {
+            show: true,
+            fontSize: '30',
+            fontWeight: 'bold'
+          }
+        },
+        labelLine: {
+          show: false
+        },
+        data: [
+          {
+            value: 98,
+            name: '父母逼迫',
+            itemStyle: {
+              color: '#78A6D0'
+            }
+          },
+          {
+            value: 34,
+            name: '掩盖性取向，躲避社会压力',
+            itemStyle: {
+              color: '#E2B5B2'
+            }
+          },
+          {
+            value: 21,
+            name: '想要子女',
+            itemStyle: {
+              color: '#C4DAD2'
+            }
+          },
+          {
+            value: 11,
+            name: '企图纠正性取向',
+            itemStyle: {
+              color: '#F7E1CE'
+            }
+          },
+          {
+            value: 8,
+            name: '女方希望结婚',
+            itemStyle: {
+              color: '#C5E4FF'
+            }
+          },
+          {
+            value: 5,
+            name: '同性伴侣相互规劝结婚',
+            itemStyle: {
+              color: '#E8C2B0'
+            }
+          }
+        ]
+      }
+    ]
+  }
+
+  const option3 = {
+    title: {
+      text: '同妻经受的双重痛苦',
+      left: 'center',
+      textStyle: {
+        color: '#fff',
+        fontSize: 20
+      }
+    },
+    legend: {
+      top: '5%'
+    },
+    tooltip: {
+      trigger: 'item',
+      triggerOn: 'mousemove'
+    },
+    series: [
+      {
+        type: 'tree',
+        data: [
+          {
+            name: '双重痛苦',
+            children: [
+              {
+                name: '生理痛苦',
+                children: [
+                  {
+                    name: '长时间没有性生活',
+                    value: 87
+                  },
+                  {
+                    name: '没有肢体接触',
+                    value: 56
+                  },
+                  {
+                    name: '争吵',
+                    value: 37
+                  },
+                  {
+                    name: '丈夫不愿回家',
+                    value: 21
+                  },
+                  {
+                    name: '被恐吓',
+                    value: 16
+                  }
+                ]
+              },
+              {
+                name: '心理痛苦',
+                children: [
+                  {
+                    name: '自我怀疑',
+                    value: 24
+                  },
+                  {
+                    name: '痛苦',
+                    value: 89
+                  },
+                  {
+                    name: '绝望',
+                    value: 44
+                  },
+                  {
+                    name: '不知所措',
+                    value: 14
+                  },
+                  {
+                    name: '难以相信爱情',
+                    value: 36
+                  },
+                  {
+                    name: '感到背叛',
+                    value: 31
+                  },
+                  {
+                    name: '心情烦躁抑郁',
+                    value: 24
+                  },
+                  {
+                    name: '忍受丈夫找男人欢愉',
+                    value: 7
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        top: '10%',
+        left: '20%',
+        bottom: '5%',
+        right: '25%',
+        symbolSize: 8,
+        label: {
+          position: 'left',
+          verticalAlign: 'middle',
+          align: 'right',
+          fontSize: 20,
+          color: '#fff'
+        },
+        leaves: {
+          label: {
+            position: 'right',
+            verticalAlign: 'middle',
+            align: 'left'
+          }
+        },
+        emphasis: {
+          focus: 'descendant'
+        },
+        expandAndCollapse: true,
+        animationDuration: 550,
+        animationDurationUpdate: 750
+      }
+    ]
+  }
+
+  const colors = ['#89BBE7', '#F4C5AC', '#89BBE7', '#CC3F57', '#9A2555']
+  const bgColor = '#000'
+  const itemStyle = {
+    star5: {
+      color: colors[0]
+    },
+    star4: {
+      color: colors[1]
+    },
+    star3: {
+      color: colors[2]
+    },
+    star2: {
+      color: colors[3]
+    }
+  }
+  const data = [
+    {
+      name: '无性生活',
+      itemStyle: {
+        color: colors[1]
+      },
+      children: [
+        {
+          name: '直接拒绝',
+          children: [
+            {
+              name: '5☆',
+              children: [
+                {
+                  name: '从未有过性生活'
+                },
+                {
+                  name: '得不到亲吻和拥抱'
+                },
+                {
+                  name: '十分抗拒肢体接触'
+                }
+              ]
+            },
+            {
+              name: '4☆',
+              children: [
+                {
+                  name: '需要分床睡才能睡着'
+                },
+                {
+                  name: '故意等妻子睡着才睡'
+                },
+                {
+                  name: '不愿回家面对妻子'
+                }
+              ]
+            },
+            {
+              name: '3☆',
+              children: [
+                {
+                  name: '骗妻子自己没有性功能'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: '找借口推脱',
+          children: [
+            {
+              name: '5☆',
+              children: [
+                {
+                  name: '主动亲热但不进行性生活'
+                }
+              ]
+            },
+            {
+              name: '4☆',
+              children: [
+                {
+                  name: '压力太大无法进行性生活'
+                },
+                {
+                  name: '工作太累没心情进行性生活'
+                }
+              ]
+            },
+            {
+              name: '3☆',
+              children: [
+                {
+                  name: '自己身体虚弱不允许性生活'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: '有性生活',
+      itemStyle: {
+        color: colors[2]
+      },
+      children: [
+        {
+          name: '吃药解决',
+          children: [
+            {
+              name: '5☆',
+              children: [
+                {
+                  name: '只有吃药才可以正常进行性生活'
+                }
+              ]
+            },
+            {
+              name: '4☆',
+              children: [
+                {
+                  name: '吃药勉强可以进行性生活'
+                },
+                {
+                  name: '吃药也无法进行性生活'
+                }
+              ]
+            },
+            {
+              name: '3☆',
+              children: [
+                {
+                  name: '以“药”无效停止性生活'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: '想象同性',
+          children: [
+            {
+              name: '5☆',
+              children: [
+                {
+                  name: '将妻子想象成同性'
+                }
+              ]
+            },
+            {
+              name: '4☆',
+              children: [
+                {
+                  name: '想象大卫的裸体雕塑'
+                },
+                {
+                  name: '想象过往和同性发生过的经历'
+                },
+                {
+                  name: '想象影像画面'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: '和他人发生',
+          children: [
+            {
+              name: '5☆',
+              children: [
+                {
+                  name: '要求妻子和他人发生性关系怀孕'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: '敷衍了事',
+          children: [
+            {
+              name: '5☆',
+              children: [
+                {
+                  name: '几分钟就结束'
+                },
+                {
+                  name: '象征性进行性行为'
+                },
+                {
+                  name: '只有亲热没有实际行动'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: '了无几次',
+          children: [
+            {
+              name: '5☆',
+              children: [
+                {
+                  name: '结婚多年次数只有4次'
+                }
+              ]
+            },
+            {
+              name: '4☆',
+              children: [
+                {
+                  name: '结婚一个月后便不再有性行为'
+                },
+                {
+                  name: '怀孕后再也没有性行为'
+                }
+              ]
+            },
+            {
+              name: '3☆',
+              children: [
+                {
+                  name: '偶尔有'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  for (let j = 0; j < data.length; ++j) {
+    let level1 = data[j].children
+    for (let i = 0; i < level1.length; ++i) {
+      let block = level1[i].children
+      let bookScore = []
+      let bookScoreId
+      for (let star = 0; star < block.length; ++star) {
+        let style = (function (name) {
+          switch (name) {
+            case '5☆':
+              bookScoreId = 0
+              return itemStyle.star5
+            case '4☆':
+              bookScoreId = 1
+              return itemStyle.star4
+            case '3☆':
+              bookScoreId = 2
+              return itemStyle.star3
+            case '2☆':
+              bookScoreId = 3
+              return itemStyle.star2
+          }
+        })(block[star].name)
+        block[star].label = {
+          color: style.color,
+          downplay: {
+            opacity: 0.5
+          }
+        }
+        if (block[star].children) {
+          style = {
+            opacity: 1,
+            color: style.color
+          }
+          block[star].children.forEach(function (book) {
+            book.value = 1
+            book.itemStyle = style
+            book.label = {
+              color: style.color
+            }
+            let value = 1
+            if (bookScoreId === 0 || bookScoreId === 3) {
+              value = 5
+            }
+            if (bookScore[bookScoreId]) {
+              bookScore[bookScoreId].value += value
+            } else {
+              bookScore[bookScoreId] = {
+                color: colors[bookScoreId],
+                value: value
+              }
+            }
+          })
+        }
+      }
+      level1[i].itemStyle = {
+        color: data[j].itemStyle.color
+      }
+    }
+  }
+  const option4 = {
+    backgroundColor: bgColor,
+    color: colors,
+    series: [
+      {
+        type: 'sunburst',
+        center: ['50%', '48%'],
+        data: data,
+        sort: function (a, b) {
+          if (a.depth === 1) {
+            return b.getValue() - a.getValue()
+          } else {
+            return a.dataIndex - b.dataIndex
+          }
+        },
+        label: {
+          rotate: 'radial',
+          color: bgColor,
+          fontSize: 16
+        },
+        itemStyle: {
+          borderColor: bgColor,
+          borderWidth: 2
+        },
+        levels: [
+          {},
+          {
+            r0: 0,
+            r: 40,
+            label: {
+              rotate: 0
+            }
+          },
+          {
+            r0: 40,
+            r: 105
+          },
+          {
+            r0: 115,
+            r: 140,
+            itemStyle: {
+              shadowBlur: 2,
+              shadowColor: colors[2],
+              color: 'transparent'
+            },
+            label: {
+              rotate: 'tangential',
+              fontSize: 10,
+              color: colors[0]
+            }
+          },
+          {
+            r0: 140,
+            r: 145,
+            itemStyle: {
+              shadowBlur: 80,
+              shadowColor: colors[0]
+            },
+            label: {
+              position: 'outside',
+              textShadowBlur: 5,
+              textShadowColor: '#333'
+            },
+            downplay: {
+              label: {
+                opacity: 0.5
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+
+  const option5 = {
+    title: {
+      text: '所受家暴情况',
+      left: 'center',
+      textStyle: {
+        color: '#fff',
+        fontSize: 20
+      }
+    },
+    tooltip: {
+      trigger: 'item'
+    },
+    legend: {
+      top: '40px',
+      left: 'center',
+      textStyle: {
+        color: '#ffffff', //字体颜色
+        fontSize: 16
+      }
+    },
+    grid: {
+      bottom: '10%', //距离下边距
+      top: '15%'
+    },
+    series: [
+      {
+        center: ['50%', '45%'],
+        name: '所受家暴',
+        type: 'pie',
+        radius: '50%',
+        itemStyle: {
+          borderRadius: 0,
+          borderColor: '#fff',
+          borderWidth: 2
+        },
+        label: {
+          textStyle: {
+            color: '#ffffff', //字体颜色
+            fontSize: 16
+          }
+        },
+        data: [
+          {
+            value: 86,
+            name: '冷暴力',
+            itemStyle: {
+              color: '#78A6D0'
+            }
+          },
+          {
+            value: 32,
+            name: '肢体冲突',
+            itemStyle: {
+              color: '#E2B5B2'
+            }
+          },
+          {
+            value: 23,
+            name: '辱骂',
+            itemStyle: {
+              color: '#C4DAD2'
+            }
+          },
+          {
+            value: 18,
+            name: '恐吓',
+            itemStyle: {
+              color: '#F7E1CE'
+            }
+          },
+          {
+            value: 12,
+            name: '嘲讽',
+            itemStyle: {
+              color: '#ECEFE7'
+            }
+          }
+        ],
+        emphasis: {
+          itemStyle: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+          }
+        }
+      }
+    ]
+  }
+  // 使用刚指定的配置项和数据显示图表。
+  myChart1.setOption(option1)
+  myChart2.setOption(option2)
+  myChart3.setOption(option3)
+  myChart4.setOption(option4)
+  myChart5.setOption(option5)
+  myChart6.setOption(option6)
+</script>
